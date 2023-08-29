@@ -1,12 +1,13 @@
 const express = require('express');
 const http = require('http');
+const db = require('./config/mongoose');
 
 const app = express();
 const port = 8000;
+
+// Setup sockets.io
 const httpServer = http.createServer(app);
-
 const io = require('./config/socket').socketsIo(httpServer);
-
 httpServer.listen(3000);
 console.log('sockets is listening.');
 
