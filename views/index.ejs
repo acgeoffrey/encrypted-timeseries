@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encrypted TimeSeries</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Encrypted TimeSeries</h1>
+  </body>
 </html>
 <script
   src="https://cdn.socket.io/4.6.0/socket.io.min.js"
@@ -13,3 +15,9 @@
   crossorigin="anonymous"
 ></script>
 <script src="/message_socket.js"></script>
+
+<% if (message){%>
+<script>
+  new MessageSocket(message);
+</script>
+<% } %>

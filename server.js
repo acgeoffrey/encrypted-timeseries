@@ -18,6 +18,12 @@ app.use(express.static('./assets'));
 app.set('view engine', 'ejs');
 app.set('views', './views');
 
+app.use('/', (req, res) => {
+  res.render('index', {
+    message: 'hello',
+  });
+});
+
 app.listen(port, (err) => {
   if (err) {
     console.log('Error in running the server');
