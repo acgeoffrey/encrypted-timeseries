@@ -7,6 +7,7 @@
   </head>
   <body>
     <h1>Encrypted TimeSeries</h1>
+    <p><%= message %></p>
   </body>
 </html>
 <script
@@ -18,6 +19,6 @@
 
 <% if (message){%>
 <script>
-  new MessageSocket(message);
+  new MessageSocket('<%= message%>');
 </script>
 <% } %>
